@@ -6,15 +6,15 @@ $(document).ready(function() {
   let x = 0;
 
   for(let i = 0; i < 9; i++) {
-    output += "<div class='row mt-2'>"
+    output += "<div class='row mt-2'>";
     for(let j = 0; j < 9; j++) {
-      output += `<div id="[${i},${j}]" class='col'><form><div class='card bg-primary text-white'><div class='card-header'><div class='form-group'><input type='number' id='input${x}' class='form-control' placeholder='${x}' min='1' max='9'></div></div><div id='${x}' class='card-body'></div></div></form></div>`
+      output += `<div id="[${i},${j}]" class='col'><form><div class='card bg-primary text-white'><div class='card-header'><div class='form-group'><input type='number' id='input${x}' class='form-control' placeholder='${x}' min='1' max='9'></div></div><div id='${x}' class='card-body'></div></div></form></div>`;
       x += 1;
     }
-    output += "</div>"
+    output += "</div>";
   }
 
-  $('#sudokuBoard').append(output)
+  $('#sudokuBoard').append(output);
 
   $('.card-body').click(function(event) {
     // event.preventDefault();

@@ -15,7 +15,6 @@ export class Sudoku {
     }
     return true;
   }
-
   columnValidator(n,x,y) {
     console.log(this.board);
     for(let i = 0; i < 9; i++){
@@ -25,4 +24,4 @@ export class Sudoku {
     }
     return true;
   }
-};
+}
