@@ -9,7 +9,7 @@ export class Sudoku {
   rowValidator(n,x,y) {
     console.log(this.board);
     for(let i = 0; i < 9; i++){
-      if(this.board[y][i] === n && i != x){
+      if(this.board[x][i] === n && i != y){
         return false;
       }
     }
@@ -18,7 +18,7 @@ export class Sudoku {
   columnValidator(n,x,y) {
     console.log(this.board);
     for(let i = 0; i < 9; i++){
-      if(this.board[i][x] === n && i != y){
+      if(this.board[i][y] === n && i != x){
         return false;
       }
     }

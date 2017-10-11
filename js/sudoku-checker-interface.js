@@ -28,11 +28,11 @@ $(document).ready(function() {
       let x_cord = cords[0];
       let y_cord = cords[1];
       // Execute some function to check for valid input
-      if(game.rowValidator(input_value,x_cord,y_cord) && game.columnValidator(input_value,x_cord,y_cord)){
+      if( game.rowValidator(input_value,x_cord,y_cord)){
         $(event.currentTarget).parents(".card").removeClass("bg-danger");
         $(event.currentTarget).parents(".card").addClass("bg-success");
         alert("good move");
-        game.board[y_cord][x_cord] = input_value;
+        game.board[x_cord][y_cord] = input_value;
       } else {
         alert("bad move");
         $(event.currentTarget).parents(".card").addClass("bg-danger");
